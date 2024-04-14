@@ -36,7 +36,8 @@ export class AppComponent {
   messages : any[] = [];
 
   sendMessage(client: number) {
-    this.chatService.sendMessage(client, client === 1 ? this.client1Model : this.client2Model);
+    // type de message en brut en attendant les boutons cote front
+    this.chatService.sendMessage(client, "DateTime", client === 1 ? this.client1Model : this.client2Model);
     client === 1 ? this.client1Model = '' : this.client2Model = ''; // cleaning the input
   }
 }

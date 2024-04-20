@@ -30,7 +30,7 @@ export class ChatService implements OnInit{
   
  
   //ajout du type de message pour contraindre niveau validation
-  sendMessage(client: number, type: string, content: string) {
+  sendMessage(client: number, type: string[], content: Object) {
     this.socket.emit('new-message', JSON.stringify({ client, type, content }));
   }
 
